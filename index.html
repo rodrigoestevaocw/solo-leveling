@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLO LEVELING SYSTEM</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#5a3fff">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="overlay" class="hidden">
+  <div id="overlay-text"></div>
+</div>
+
+<div class="system-window">
+
+  <h1 class="system-title">SYSTEM</h1>
+
+  <div class="status">
+    <p>NÍVEL: <span id="level"></span></p>
+    <p>EXP: <span id="exp"></span></p>
+    <p>TAREFAS NO NÍVEL: <span id="tasks"></span></p>
+
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+  </div>
+
+  <div class="quest-box">
+    <h2>DAILY QUEST</h2>
+    <ul id="quest-list"></ul>
+    <button id="complete-btn">QUEST COMPLETE</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+  }
+</script>
+</body>
+</html>
