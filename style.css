@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #bfaaff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.system-window {
+  width: 90%;
+  max-width: 420px;
+  border: 2px solid #5a3fff;
+  padding: 20px;
+  box-shadow: 0 0 25px #5a3fff;
+}
+
+.system-title {
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+
+.status p {
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #111;
+  margin: 10px 0;
+  border: 1px solid #5a3fff;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #5a3fff, #00e0ff);
+  transition: width 0.4s;
+}
+
+.quest-box {
+  margin-top: 20px;
+}
+
+.quest-box h2 {
+  margin-bottom: 10px;
+}
+
+.quest-box ul {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.quest-box li {
+  margin-bottom: 6px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #5a3fff;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#overlay-text {
+  font-size: 3rem;
+  color: #5a3fff;
+  animation: pulse 1s infinite;
+  text-shadow: 0 0 20px #5a3fff;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
